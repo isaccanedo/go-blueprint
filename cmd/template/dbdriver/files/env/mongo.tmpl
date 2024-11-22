@@ -1,0 +1,8 @@
+{{ if .AdvancedOptions.docker }}
+BLUEPRINT_DB_HOST=mongo_bp
+{{- else }}
+BLUEPRINT_DB_HOST=localhost
+{{- end }}
+BLUEPRINT_DB_PORT=27017
+BLUEPRINT_DB_USERNAME=melkey
+BLUEPRINT_DB_ROOT_PASSWORD=password1234

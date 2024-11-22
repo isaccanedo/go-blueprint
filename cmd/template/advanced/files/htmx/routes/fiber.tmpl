@@ -1,0 +1,11 @@
+s.App.Use("/assets", filesystem.New(filesystem.Config{
+		Root:       http.FS(web.Files),
+		PathPrefix: "assets",
+		Browse:     false,
+	}))
+
+s.App.Get("/web", adaptor.HTTPHandler(templ.Handler(web.HelloForm())))
+
+s.App.Post("/hello", func(c *fiber.Ctx) error {
+  return web.HelloWebHandler(c)
+})

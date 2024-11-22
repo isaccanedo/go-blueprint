@@ -1,0 +1,10 @@
+{{- if .AdvancedOptions.docker }}
+BLUEPRINT_DB_HOST=psql_bp
+{{- else }}
+BLUEPRINT_DB_HOST=localhost
+{{- end }}
+BLUEPRINT_DB_PORT=5432
+BLUEPRINT_DB_DATABASE=blueprint
+BLUEPRINT_DB_USERNAME=melkey
+BLUEPRINT_DB_PASSWORD=password1234
+BLUEPRINT_DB_SCHEMA=public
